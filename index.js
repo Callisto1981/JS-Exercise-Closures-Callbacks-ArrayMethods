@@ -291,14 +291,14 @@ function counterMaker() {
  */
 function counterMakerWithLimit(max) {
   let count = -1;
-  function counter() {
-    if (count > max) {
+  return function counter() {
+    if (count >= max) {
       count = 0;
     } else {
       count++;
     }
     return count;
-  }
+  };
 }
 
 /////////////// END OF CHALLENGE ///////////////
