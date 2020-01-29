@@ -185,7 +185,7 @@ function processDuplicateFree(list, callback) {
 function getFullNames(runners) {
   const newArray = [];
   runners.forEach(function(item) {
-    newArray.push(item.last_name, item.first_name);
+    return newArray.push(`${item.last_name}, ${item.first_name}`);
   });
   return newArray;
 }
